@@ -21,8 +21,8 @@ To do this I had to do some circuit analysis:
 
 I defined first : $&DeltaV = VA - VB$
 Then I applied KCL to get the following equations:
-$$CsVB = Cs\DeltaV + KCs\DeltaV = (Cs + K)\DeltaV$$
+$$CsVB = Cs\Delta V + KCs\Delta V = (Cs + K)\Delta V$$
 
-$$CsVB = Cs\DeltaV + KCs\DeltaV = (Cs + K)\DeltaV$$
+$$CsVB = Cs\Delta V + KCs\Delta V = (Cs + K)\Delta V$$
 
-$$Cs\DeltaV = \frac{V1 - VA}{Ls + R} = \frac{V1 - \DeltaV - VB}{Ls + R}$$
+$$Cs\Delta V = \frac{V1 - VA}{Ls + R} = \frac{V1 - \Delta V - VB}{Ls + R}$$
