@@ -21,6 +21,9 @@ To do this I had to do some circuit analysis:
 
 I defined first : $\Delta V = V_A - V_B$
 Then I applied KCL to get the following equations:
-$$CsV_B = Cs\Delta V + KCs\Delta V = (Cs + K)\Delta V$$
+$$CsV_B = Cs\Delta V + K\Delta V = (Cs + K)\Delta V$$
 
 $$Cs\Delta V = \frac{V_1 - V_A}{Ls + R} = \frac{V1 - \Delta V - V_B}{Ls + R}$$
+
+Then I got the transfer function:
+$$\frac{V_B\left(s\right)}{V_1left(s\right)} = 1 $$
