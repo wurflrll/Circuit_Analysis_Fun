@@ -19,10 +19,8 @@ This lead me to imagine that a voltage source was responsible for the noise, a s
 It doesn't matter what the voltage source should look like, the system would have to be unstable, so the transfer function between "V1" and another node in the circuit should have a pole with a positive real part.
 To do this I had to do some circuit analysis:
 
-I defined first : $&DeltaV = VA - VB$
+I defined first : $\Delta V = V_A - V_B$
 Then I applied KCL to get the following equations:
-$$CsVB = Cs\Delta V + KCs\Delta V = (Cs + K)\Delta V$$
+$$CsV_B = Cs\Delta V + KCs\Delta V = (Cs + K)\Delta V$$
 
-$$CsVB = Cs\Delta V + KCs\Delta V = (Cs + K)\Delta V$$
-
-$$Cs\Delta V = \frac{V1 - VA}{Ls + R} = \frac{V1 - \Delta V - VB}{Ls + R}$$
+$$Cs\Delta V = \frac{V_1 - V_A}{Ls + R} = \frac{V1 - \Delta V - V_B}{Ls + R}$$
