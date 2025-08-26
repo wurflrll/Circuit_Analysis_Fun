@@ -26,4 +26,4 @@ $$CsV_B = Cs\Delta V + K\Delta V = (Cs + K)\Delta V$$
 $$Cs\Delta V = \frac{V_1 - V_A}{Ls + R} = \frac{V1 - \Delta V - V_B}{Ls + R}$$
 
 Then I got the transfer function:
-$$\frac{V_B\left(s\right)}{V_1left(s\right)} = 1 $$
+$$\frac{V_B\left(s\right)}{V_1\left(s\right)} = 1 $$
