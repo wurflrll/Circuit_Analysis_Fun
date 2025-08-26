@@ -20,6 +20,4 @@ It doesn't matter what the voltage source should look like, the system would hav
 To do this I had to do some circuit analysis:
 I defined first 
 
-```text
 $$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
-```
