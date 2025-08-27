@@ -49,4 +49,14 @@ $$ I = \frac{2I_{\text{max}}}{\pi}\tan^{-1}{\left(K\pi\frac{\left(V_A - V_B\righ
 
 In order to make the simulation work, I also had to add a large resistor in parallel with the current source.
 
-![](images/colpitts_wikipedia.png "Real Version to Simulate")
+![](images/colpitts_real_simulated.png "Real Version to Simulate")
+
+For practical purposes, I just set $I_\text{max}$ to 10 times K.
+
+Since we know that the criteria for oscillation with these chosen values is $K > 0.0152mA/V$.  I tried the values around that point.
+
+![](images/k_0point015.png "Showing K = 0.15mA")
+With K = 0.015mA/V, just under what's required for stability, the signal dies out after the step since the system is stable
+
+![](images/k_0point015.png "Showing K = 0.16mA")
+With K = 0.016mA/V, just under what's required for stability, the signal dies out after the step since the system is stable
