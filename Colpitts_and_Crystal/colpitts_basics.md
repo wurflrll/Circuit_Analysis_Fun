@@ -35,3 +35,14 @@ Then, after applying the Routh-Hurwitz criterion, I found that instability occur
 $$2RC^3 - KLC^2 < 0$$
 
 $$K > \frac{2RC}{L}$$
+
+So for our current example, for an oscillation to be generated K needs to be greater than 0.0152mA/V.
+
+## Simulation
+
+Simulating oscillators can be a little tricky in simulators can be a little tricky, because as I said before a Colpitt's oscillator needs a little bit of energy from external noise to get going, which a simulator can't really provide.  To fix this I just added a small pulse to the circuit.
+
+Another issue is the fact that for a Colpitt's oscillator to work in real life, the current amplifying component must saturate (there must be a current limit / the gain must decrease to 0).  Obviously in real life BJTs saturate.  In order to do this and still demonstrate the concept, I came up with a play function which smoothly trends towards a maximum current $I_{\text{max}}$.  In the SPICE simulation below I replaced our current source $I = K(V_A - V_B)$, with another function:
+
+$$ I = \frac{2I_{\text{max}}}{\pi}\atan\left(K\pi\frac{\left(V_A - V_B\right)}{2I_{\text{max}}}\right) $$
+
