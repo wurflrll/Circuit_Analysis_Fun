@@ -2,9 +2,10 @@
 
 ## The Model
 The basic model I'm using to understand the oscillation of the colpitt's oscillator is what I think to be a more complete form of the one found on [Wikipedia](https://en.wikipedia.org/wiki/Colpitts_oscillator).
-![Alt text](images/colpitts_wikipedia.png "Basic Wikipedia Version")
 
-![Alt text](images/colpitts_wikipedia.png "My Version")
+![Wikipedia version not found](images/colpitts_wikipedia.png "Basic Wikipedia Version")
+
+![My colpitts model, image not found](images/colpitts_model.png "My Version")
 
 The difference is that while Wikipedia assumes the existence of the inductor which forms the LC tank circuit, I'm putting it in explicitly.  I also am putting in a resistor in series with the inductor, allowing for the Colpitt's oscillator to lose energy to resistive elements as it would in a normal circuit.  This is because  what I want to determine is exactly what makes the circuit oscillate.
 
@@ -46,3 +47,6 @@ Another issue is the fact that for a Colpitt's oscillator to work in real life, 
 
 $$ I = \frac{2I_{\text{max}}}{\pi}\tan^{-1}{\left(K\pi\frac{\left(V_A - V_B\right)}{2I_{\text{max}}}\right)} $$
 
+In order to make the simulation work, I also had to add a large resistor in parallel with the current source.
+
+![](images/colpitts_wikipedia.png "Real Version to Simulate")
