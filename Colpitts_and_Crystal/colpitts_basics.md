@@ -21,9 +21,17 @@ To do this I had to do some circuit analysis:
 
 I defined first : $\Delta V = V_A - V_B$
 Then I applied KCL to get the following equations:
+
 $$CsV_B = Cs\Delta V + K\Delta V = (Cs + K)\Delta V$$
 
-$$Cs\Delta V = \frac{V_1 - V_A}{Ls + R} = \frac{V1 - \Delta V - V_B}{Ls + R}$$
+$$Cs\Delta V = \frac{V_1 - V_A}{Ls + R} = \frac{V_1 - \Delta V - V_B}{Ls + R}$$
 
 Then I got the transfer function:
-$$\frac{V_B\left(s\right)}{V_1\left(s\right)} = 1 $$
+
+$$\frac{V_B\left(s\right)}{V_1\left(s\right)} = \frac{Cs + K}{LC^2s^3 + RC^2s^2 + 2Cs + K}}$$
+
+Then, after applying the Routh-Hurwitz criterion, I found that instability occurs when:
+
+$$2RC^3 - KLC^2 < 0$$
+
+$$K > \frac{2RC}{L}$$
