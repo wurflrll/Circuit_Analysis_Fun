@@ -44,5 +44,5 @@ Simulating oscillators can be a little tricky in simulators can be a little tric
 
 Another issue is the fact that for a Colpitt's oscillator to work in real life, the current amplifying component must saturate (there must be a current limit / the gain must decrease to 0).  Obviously in real life BJTs saturate.  In order to do this and still demonstrate the concept, I came up with a play function which smoothly trends towards a maximum current $I_{\text{max}}$.  In the SPICE simulation below I replaced our current source $I = K(V_A - V_B)$, with another function:
 
-$$ I = \frac{2I_{\text{max}}}{\pi}\arctan{K\pi\frac{\left(V_A - V_B\right)}{2I_{\text{max}}}} $$
+$$ I = \frac{2I_{\text{max}}}{\pi}\tan{-1}{K\pi\frac{\left(V_A - V_B\right)}{2I_{\text{max}}}} $$
 
