@@ -13,4 +13,4 @@ Now, it could be the case that L is 34.7uH and C is 1pF, or it could be that L i
 
 ## The Quick Fixes
 
-To decrease the amplitude of the oscillator, one thing we can do is change our DC operating point.  If we think about our simple BJT model, the current gain should be proportional to around $\frac{\B}{r_{\pi}}$.
+To decrease the amplitude of the oscillator, one thing we can do is change our DC operating point.  If we think about our simple BJT model, the current gain should be proportional to around $\frac{\beta}{r_{\pi}}$.
