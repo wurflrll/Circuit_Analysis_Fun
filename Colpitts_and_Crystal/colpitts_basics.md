@@ -58,5 +58,5 @@ Since we know that the criteria for oscillation with these chosen values is $K >
 ![](images/k_0point015.png "Showing K = 0.15mA")
 With K = 0.015mA/V, just under what's required for oscillation, the signal dies out after the step since the system is stable
 
-![](images/k_0point015.png "Showing K = 0.16mA")
+![](images/k_0point016.png "Showing K = 0.16mA")
 With K = 0.016mA/V, just over what's required for oscillation, the signal oscillates during and after step for perpituity.
