@@ -20,3 +20,5 @@ Although $\beta$ varies between two BJTs of the same model, another important pa
 The importance of $I_S$ can be chiefly found through the Eber-Moll Model:
 
 $I_c = I_s(e^{\frac{V_{BE}}{V_T}}-1)$
+
+
