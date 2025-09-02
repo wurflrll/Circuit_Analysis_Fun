@@ -1,3 +1,3 @@
 # Circuit Analysis Stuffs
 
-Verifying some stuffs
+Taking a look at a few circuit ideas outside of pure classwork.
