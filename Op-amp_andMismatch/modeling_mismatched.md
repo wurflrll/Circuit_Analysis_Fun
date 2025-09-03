@@ -18,7 +18,7 @@ To understand the relative importance of $I_S$ vs $\beta$, we could apply the Eb
 
 $I_c = I_s(e^{\frac{V_{BE}}{V_T}}-1)$
 
-![VB applied to NPN with base and emitter resistor](images/colpitts_model.png)
+![VB applied to NPN with base and emitter resistor](images/basic.png)
 *Note that $V_B$ is not simply the voltage at the base terminal.
 
 From basic analysis we know:
