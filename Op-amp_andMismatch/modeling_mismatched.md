@@ -14,14 +14,20 @@ To start, I create a duplicate model of the 2N2222, but changed BF to 80 (creati
 Although $\beta$ varies between two BJTs of the same model, another important parameter is the saturation current (or scale current) $I_S.
 The importance of $I_S$ can be chiefly found through the Eber-Moll Model:
 
-To understand the relative importance of $I_S$ vs $\beta$, we could apply the Eber-Moll Model to the below circuit where the Eber-Moll model is given by the equation:
+To understand the relative importance of $I_S$ vs $\beta$, we could apply the Eber-Moll Model to the below circuit.
 
 $I_c = I_s(e^{\frac{V_{BE}}{V_T}}-1)$
 
 ![VB applied to NPN with base and emitter resistor](images/basic.png)
 *Note that $V_B$ is not simply the voltage at the base terminal.
 
+
+The Eber-Moll Model is given by:
+
+$I_c = I_s(e^{\frac{V_{BE}}{V_T}}-1)$
+
 From basic analysis we know:
+
 $V_{BE} = V_B - I_BR_1 - I_CR_2$
 and assuming active mode: $I_C = \beta I_{B}$
 
