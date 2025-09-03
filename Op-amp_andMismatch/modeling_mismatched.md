@@ -23,6 +23,6 @@ $I_c = I_s(e^{\frac{V_{BE}}{V_T}}-1)$
 
 From basic analysis we know:
 $V_{BE} = V_B - I_BR_1 - I_CR_2$
-and assuming active mode: $I_C = \betaI_{B}$
+and assuming active mode: $I_C = \beta I_{B}$
 
 This parameter plays increased importance when the base resistor is 0 or small, when there is a strong base resistor present, the current is affected more by $\beta$
