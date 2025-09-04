@@ -55,9 +55,7 @@ from this is can be shown using W, the Lambert W function:
 
 $I_C = \frac{V_T}{R_{eq}}W(\frac{R_{eq}}{V_T}I_Se^{\frac{V_B}{V_T}})$
 
-This demonstrates the basic behavior that we are getting at, the Lambert W function's derivative is very small and gets smaller as it's argument increases. With some sample values $R_{eq} = 500$, $V_B = 2$, $I_S = 1E-14$, we get an inner argument of ~7.72e23, and W(7.72e23) = 51.  Halfing the value of $I_S$ would decrease the collector current by 1.2%. When R_{eq} is small however, then I_S has a large effect on the collector current.
-
-This parameter plays increased importance when the base resistor is 0 or small, when there is a strong base resistor present, the current is affected more by $\beta$.
+This demonstrates the basic behavior that we are getting at, the Lambert W function's derivative is very small and gets smaller as it's argument increases. With some sample values $R_{eq} = 500$, $V_B = 2$, $I_S = 1E-14$, we get an inner argument of ~7.72e23, and W(7.72e23) = 51.  Halfing the value of $I_S$ would decrease the collector current by 1.2%. When $R_{eq}$ is small however, then I_S has a large effect on the collector current.
 
 ## MORE RESISTORS
 As seen in the previous section, we can alleviate this dependence on $I_S$ by increasing $R_{eq}$, adding some about of base or collector resistance (or both at the same time).  Intuitively, when we increase the emitter resistance, we are essentially biting into the size of our output, because it means the transistor will not be able to support a high current without dipping into cutoff, so it would be better to increase the base resistance.
@@ -68,7 +66,21 @@ $R_{eq} = \frac{R_1}{\beta} + R_2$, we can see that to get the same effect the r
 Here is the same circuit with mismatched components given a base resistor:
 ![VB applied to NPN with base and emitter resistor](images/only_base_mismatch_beta.png)
 
+Originally I wanted to look at frequency response with respect to transistor mismatch as well, leading me to choose for input a 1MHz signal, but due to this going forward I will put back in a 10KHz signal. This doesn't have a massive impact, but can change results by nearly 10%.  Here 
+
 As you can see the base resistor is not effective, because although it decreases the dependence on $I_S$, it leaves the dependence on $\beta$ unaffected.  Increasing the $\beta$ of NPN_LOWER back to default, yields a result better than we had in the first case (when $\beta$'s were equal and no base resistor)  Another thing that happens when adding resistor is that due to the parasitic base-emitter and base-collector capacitance, high frequency signals are attenuated (we are basically adding a RC filter).  Originally I wanted to look at frequency response with respect to transistor mismatch as well, leading me to choose for input a 1MHz signal, but due to this going forward I will put back in a 10KHz signal. This doesn't have a massive impact, but can change results by nearly 10%.
 
-With the $\beta$ difference eliminated, and only a $I_S$ difference remaining, results are much better:
+If we imagine a world with no $\beta$ variance, and only $I_S$ variance was remaining, results are much better with a 3.3K base resistor:
 
+![Not found](images/only_is_mismatch.png)
+
+The difference in DC current as well is eliminated almost entirely when we increase the resistance to 10K:
+
+![Not found](images/mismatch_with_is_10k.png)
+
+Reincorperating an emitter resistor, we can see a fix to both our issues, even when adding back the $\beta$ variance:
+
+![Not found](images/mismatch_with_is_10k.png)
+
+
+There will always be some mismatch given component values, doing some circuit analysis we get, even assuming forward voltage $V_{BE}$ is a constant 0.7V, we get (with $I_S$ being the source current to be mirrored, not the physical transistor parameter, and $I_L$ being the load current):
