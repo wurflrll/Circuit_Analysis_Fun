@@ -66,8 +66,6 @@ $R_{eq} = \frac{R_1}{\beta} + R_2$, we can see that to get the same effect the r
 Here is the same circuit with mismatched components given a base resistor:
 ![VB applied to NPN with base and emitter resistor](images/only_base_mismatch_beta.png)
 
-Originally I wanted to look at frequency response with respect to transistor mismatch as well, leading me to choose for input a 1MHz signal, but due to this going forward I will put back in a 10KHz signal. This doesn't have a massive impact, but can change results by nearly 10%.  Here 
-
 As you can see the base resistor is not effective, because although it decreases the dependence on $I_S$, it leaves the dependence on $\beta$ unaffected.  Increasing the $\beta$ of NPN_LOWER back to default, yields a result better than we had in the first case (when $\beta$'s were equal and no base resistor)  Another thing that happens when adding resistor is that due to the parasitic base-emitter and base-collector capacitance, high frequency signals are attenuated (we are basically adding a RC filter).  Originally I wanted to look at frequency response with respect to transistor mismatch as well, leading me to choose for input a 1MHz signal, but due to this going forward I will put back in a 10KHz signal. This doesn't have a massive impact, but can change results by nearly 10%.
 
 If we imagine a world with no $\beta$ variance, and only $I_S$ variance was remaining, results are much better with a 3.3K base resistor:
@@ -80,7 +78,8 @@ The difference in DC current as well is eliminated almost entirely when we incre
 
 Reincorperating an emitter resistor, we can see a fix to both our issues, even when adding back the $\beta$ variance:
 
-![Not found](images/mismatch_with_is_10k.png)
+![Not found](images/emitter_resistor_fix.png)
 
+Even without a need for back and forth There will always be some mismatch given component values, doing some circuit analysis we get, even assuming forward voltage $V_{BE}$ is a constant 0.7V, we get (with $I_S$ being the source current to be mirrored, not the physical transistor parameter, and $I_L$ being the load current):
 
-There will always be some mismatch given component values, doing some circuit analysis we get, even assuming forward voltage $V_{BE}$ is a constant 0.7V, we get (with $I_S$ being the source current to be mirrored, not the physical transistor parameter, and $I_L$ being the load current):
+## In Conclusion
