@@ -80,6 +80,9 @@ Reincorperating an emitter resistor, we can see a fix to both our issues, even w
 
 ![Not found](images/emitter_resistor_fix.png)
 
-Even without a need for back and forth There will always be some mismatch given component values, doing some circuit analysis we get, even assuming forward voltage $V_{BE}$ is a constant 0.7V, we get (with $I_S$ being the source current to be mirrored, not the physical transistor parameter, and $I_L$ being the load current):
+This begs the question, why bring up the base resistor at all, if the emitter resistor fixes both $\beta$ and $\I_S$ variance, why have a base resistor which just makes $\beta$ variance worse?
 
-## In Conclusion
+## How can the base resistor possibly help?
+
+One place, a mixer.  It is advantageous of us to operate our circuit in the low current region where the parameter $I_S$ takes prominence.  Due to this, we both the emitter and base resistor can play a role in decreasing variance.  Additionally, when looking at a common emitter amplifier circuit from the emitter side, the base resistor offers little impedance (it's effective resistance should be divided by $beta$).
+
