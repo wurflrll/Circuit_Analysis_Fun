@@ -1,0 +1,3 @@
+
+
+A thevenin works because the user controls the characteristic impedance of an antenna by moving their hand between the two rods, essentially the hand forms a variable capacitor.  Our AC model for analysis is simply a 50 ohm resistance in parallel with a 0-100 pF capacitor, with a 10 uF capacitor simply to block DC.
