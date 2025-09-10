@@ -18,3 +18,5 @@ $I_E = I_S(e^{\frac{V_{BE}}{V_T}}-1)$ with the yet to be proved assumption $I_E$
 so $V_C = V_S - I_{S1}R(e^{\frac{{V_C-V_{+}}}{V_T}}-1) - I_{S2}R(e^{\frac{{V_C-V_{-}}}{V_T}}-1)$
 
 The output of the op-amp is interesting in the small region where $I_{E2}$ is small.
+
+
