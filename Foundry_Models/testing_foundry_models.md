@@ -14,3 +14,7 @@ where $\beta$ is given by:
 $$\beta = \mu C_{ox}\frac{W}{L}$$
 
 Yet the relationship seemed to be strangely linear.  
+
+
+Something to be noted is that the equation $I_{ds}$ above is just a simplification of another equation:
+
