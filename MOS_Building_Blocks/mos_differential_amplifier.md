@@ -31,3 +31,7 @@ $$= KR(V_1^2 - V_2^2 + 2(V_2-V_1)(V_{A} + V_t))$$
 calculating V_A is a little hard because it's a long quadratic.
 
 ![Not Found](images/gain_of_two.png)
+On the right, we have the input signals, a 1MHz and a 100kHz signal with amplitude 0.15V.  What's plotted on the left is our differential signal (the difference between the drain voltages).  This circuit provides only a small gain that we want to increase.
+
+Either way, the gain is way too small.  This can be fixed by increasing the current source or by increasing the value of the resistor to vdd.  So for example, quadrupling our W/L ratio and doubling the value of the bottom left resistor (R0), doubles the value of the current source and changes the voltage gain to.
+
