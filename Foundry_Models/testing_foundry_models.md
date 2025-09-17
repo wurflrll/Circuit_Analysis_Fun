@@ -4,7 +4,10 @@ Through my Intro to VLSI class I recently got access to Cadence.  The first thin
 
 ![Not Found](images/current_curves.png)
 
-This shows the saturation current vs Gate Length for three values of Vds (Orange Vds = 2.5V, Yellow Vds = 2.0V, and Blue Vds = 1.5V).  The model I'm using is the 1V NMOS which is part of the 45nm General Process Design Kit (gpdk045 in my Cadence environment).  The typical value of Length not coincidentally 45nm, but I set up a parameter sweep between 40-75nm.
+This shows the saturation current vs Gate Length for three values of Vds (Orange Vds = 2.5V, Yellow Vds = 2.0V, and Blue Vds = 1.5V).  The model I'm using is the 1V NMOS which is part of the 45nm General Process Design Kit (gpdk045 in my Cadence environment).  The typical value of Length not coincidentally is 45nm, but I set up a parameter sweep between 40-75nm.
+
+![Not Found](images/basic_setup.png)
+To set this up I simply connected the drain to source, ensuring the transistor remains in saturation, then I just defined a design parameter Length and assigned it to the instances.
 
 What I was expecting is that the saturation current should be inversely proportional to the gate length, from the equation:
 
@@ -17,4 +20,6 @@ Yet the relationship seemed to be strangely linear.
 
 
 Something to be noted is that the equation $I_{ds}$ above is just a simplification of another equation:
+
+# Testing body effect
 

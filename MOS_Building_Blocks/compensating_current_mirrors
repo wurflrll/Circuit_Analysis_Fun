@@ -1,0 +1,6 @@
+## More accurate current Mirrors
+
+Even more fundamental than the differential amplifier is the current mirror.  The basic current mirror circuit as seen below relies on the assumption that for two equal FETS, if their $V_{gs}$ is equal and they are in the saturated region, then their drain currents will be equally.  Of course, we know this isn't exactly true.  As per the body effect, the drain current should increase slighly with $V_{ds}$, compensation for this can come in many different forms.
+
+Here is the original current mirror circuit:
+

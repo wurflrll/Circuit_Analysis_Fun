@@ -39,11 +39,24 @@ Either way, the gain is way too small.  This is due to the bottom MOSFET not bei
 ![Not Found](images/Original_Bottom_MOS_inLinear.png)
 Here, the drain to source voltage is considerably lower than the gain to source voltage.
 
-Increasing the W/L ratio to 40:3 still leaves MOSFET in the unsaturated region, and interestingly enough pulls the top FETs into the saturated region as well.  This is due likely to the large DC bias on the input gates (3V).  Here you can see the top FETs now unsaturated:
+Increasing the W/L ratio to 40:3 still leaves MOSFET in the unsaturated region, and interestingly enough pulls the top FETs into the unsaturated region as well.  Here you can see the top FETs now unsaturated:
 ![Not Found](images/Saturated_TOP_MOS.png)
 
+Our problem in this circuit is that because the bottom FET's current is so high (it only has a 2K load on current mirror), it's saturation point is too far too the right.  This brings the operating point to the right, making the top and bottom FETs both touch the saturation threshold.  Doing the opposite, increasing the W/L to 40:3 for the top FETs, and increasing our current mirror resistor to 51K, we get the case where all FETs are in saturation.  Our gain has now increased to around ~5.5.  Still much small than desired but progress nonetheless.
+![Not Found](images/gain_of_5_5.png)
 
-So for example, quadrupling our W/L ratio and halving the value of the bottom left resistor (R0), doubles the value of the current source while at the same time meaning that the voltage at the bottom node (what I refer to as V_{A}), can be smaller without the circuit going into saturation.
 
-The issue with this is that the top MOSFET's can now be more likely to go into saturation
+Increasing our drain resistors should increase the gain, given that the FETs remain in saturation.  Barely more than doubling our resistors does this however, leaving $V_{ds}$ less than our approximate value of $V_{gs} - V_t$.  It should be noted that for this model, our $V_t$ should be approximately 0.65V.
+
+![Not Found](images/change_to_51k.png)
+![Not Found](images/51k_view_saturation.png)
+
+It gets even worse with change to a 75k resistor:
+![Not Found](images/75k_even_more_unsaturated.png)
+
+We simply don't have much headroom, this is intuitive, because when viewing the NMOS and resistor as one device, increasing the resistance increases the effective necessary voltage for saturation.  This can be seen in the simplistic diagram below:
+
+![Not Found](images/R_and_saturation.png)
+
+One way to increase headroom is to increase the W/L ratio of the FETs, even increasing the W/L ratio for the bottom FET will drop voltage needed for the FET to saturate at that given current.  Simply increasing the W/L of the FETs will not work however if the output is too high, simply because the amount of headroom will always be inversely related to the size of the output.  Increasing the resistance to a certain level just means there will never be enough margin.
 
