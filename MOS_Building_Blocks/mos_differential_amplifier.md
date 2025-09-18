@@ -62,5 +62,17 @@ One way to increase headroom is to increase the W/L ratio of the FETs, even incr
 
 ![Not Found](images/Rd_too_high.png)
 
-Even in this case, increasing the W/L ratio to 66.7 wasn't enough.  Simply the drain resistors are too high for the amplitude of our inputs and our chosen tail current.  Repeating this again for more realistic values with inputs of 15mV, we can try to find a much higher gain. 
+Even in this case, increasing the W/L ratio to 66.7 wasn't enough.  Simply the drain resistors are too high for the amplitude of our inputs and our chosen tail current.  Repeating this again for more realistic values with inputs of amplitude 15mV, we can try to find a much higher gain. 
+
+
+With our resistor option at 50K drain resistors, we get a gain of ~11.4.  
+
+A graph of our differential signal (difference between drain voltages):
+
+![Not Found](images/differential_signal_small_resistor.png)
+
+To see how far away the circuit is from saturation just look at the graph below:
+
+![Not Found](images/see_saturation_small_50.png)
+
 
