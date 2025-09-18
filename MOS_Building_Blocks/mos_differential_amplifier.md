@@ -42,11 +42,11 @@ Here, the drain to source voltage is considerably lower than the gain to source 
 Increasing the W/L ratio to 40:3 still leaves MOSFET in the unsaturated region, and interestingly enough pulls the top FETs into the unsaturated region as well.  Here you can see the top FETs now unsaturated:
 ![Not Found](images/Saturated_TOP_MOS.png)
 
-Our problem in this circuit is that because the bottom FET's current is so high (it only has a 2K load on current mirror), it's saturation point is too far too the right.  This brings the operating point to the right, making the top and bottom FETs both touch the saturation threshold.  Doing the opposite, increasing the W/L to 40:3 for the top FETs, and increasing our current mirror resistor to 51K, we get the case where all FETs are in saturation.  Our gain has now increased to around ~5.5.  Still much small than desired but progress nonetheless.
+Our problem in this circuit is that because the bottom FET's current is so high (it only has a 2K load on current mirror), it's saturation point is too far to the right.  This brings the operating point to the right, making the top and bottom FETs both touch the saturation threshold.  Doing the opposite, increasing the W/L to 40:3 for the top FETs, and increasing our current mirror resistor to 51K, we get the case where all FETs are in saturation.  Our gain has now increased to around ~5.5.  With large amplitude input signals, a great improvement in gain isn't likely.
 ![Not Found](images/gain_of_5_5.png)
 
 
-Increasing our drain resistors should increase the gain, given that the FETs remain in saturation.  Barely more than doubling our resistors does this however, leaving $V_{ds}$ less than our approximate value of $V_{gs} - V_t$.  It should be noted that for this model, our $V_t$ should be approximately 0.65V.
+If we do want to increase the gain, increasing the drain resistors should do the trick given that the FETs remain in saturation.  Barely more than doubling our resistors violates this however, leaving $V_{ds}$ less than our approximate value of $V_{gs} - V_t$.  It should be noted that for this model, our $V_t$ should be approximately 0.65V.
 
 ![Not Found](images/change_to_51k.png)
 ![Not Found](images/51k_view_saturation.png)
@@ -59,4 +59,8 @@ We simply don't have much headroom, this is intuitive, because when viewing the 
 ![Not Found](images/R_and_saturation.png)
 
 One way to increase headroom is to increase the W/L ratio of the FETs, even increasing the W/L ratio for the bottom FET will drop voltage needed for the FET to saturate at that given current.  Simply increasing the W/L of the FETs will not work however if the output is too high, simply because the amount of headroom will always be inversely related to the size of the output.  Increasing the resistance to a certain level just means there will never be enough margin.
+
+![Not Found](images/Rd_too_high.png)
+
+Even in this case, increasing the W/L ratio to 66.7 wasn't enough.  Simply the drain resistors are too high for the amplitude of our inputs and our chosen tail current.  Repeating this again for more realistic values with inputs of 15mV, we can try to find a much higher gain. 
 
