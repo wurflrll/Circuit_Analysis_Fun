@@ -21,5 +21,7 @@ Yet the relationship seemed to be strangely linear.
 
 Something to be noted is that the equation $I_{ds}$ above is just a simplification of another equation:
 
-# Testing body effect
+# Testing channel width modulation
+
+Channel width modulation causes drain current to increase slighly with drain-source voltage, even in the saturation region.  Through our small-signal analysis, this can be modeled by a large reistor between the drain and source terminals.
 

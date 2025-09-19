@@ -75,4 +75,8 @@ To see how far away the circuit is from saturation just look at the graph below:
 
 ![Not Found](images/see_saturation_small_50.png)
 
+The only solution is then to to a different design, where the drain resistors are replaced by equal FETs with drain tied to source, acting as almost quadratic resistors.
 
+The results of this circuit are horrible, to put it mildy:
+
+![Not Found](images/initial_diff_amp.png)
