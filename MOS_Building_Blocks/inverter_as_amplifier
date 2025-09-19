@@ -6,3 +6,7 @@ The classic 2 FET digital inverter circuit looks quite a lot similar to push-pul
 In an ideal inverter circuit, the PMOS and NMOS transistors are perfectly balanced, and we get a curve like this, where we see the steepest part (highest $\frac{\DeltaV_o}{\DeltaV_{in}}$) at $V_{in} = \frac{V_{dd}}{2}$.
 
 ![Not Found](images/ideal_output_vs_input.png)
+
+Here is the curve calculated using a parametric sweek with 45nm models:
+
+![Not Found](images/calculated_curve.png)
