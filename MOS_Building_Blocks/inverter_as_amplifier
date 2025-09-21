@@ -5,8 +5,19 @@ The classic 2 FET digital inverter circuit looks quite a lot similar to push-pul
 
 In an ideal inverter circuit, the PMOS and NMOS transistors are perfectly balanced, and we get a curve like this, where we see the steepest part (highest $\frac{\DeltaV_o}{\DeltaV_{in}}$) at $V_{in} = \frac{V_{dd}}{2}$.
 
+Below is basically a flipped version of what I'm talking about (showing a buffer not an inverter).
 ![Not Found](images/ideal_output_vs_input.png)
 
 Here is the curve calculated using a parametric sweek with 45nm models:
 
 ![Not Found](images/calculated_curve.png)
+
+It seems that the NMOS is "stronger" than PMOS, of course this is not too surprising given information recently learned in my intro to VLSI class.  Greater electron mobility means a steeper I-V curve for NMOS.  Since the mid-point is found at a lower voltage ~2.105V, this needs to be our operating point instead of 2.5V for high gain.  
+
+This is intuitive, but still interesting to graph regardless:
+
+Here is a graph where the input is given 2.5V DC bias, the input is a 15mV 100kHz sinusoid.  The gain is very small ~1.36.
+
+![Not Found](images/gain_at_2_5.png)
+
+I don't want to have to experiment with finding the correct amplitude everytime.  Interestingly if the $\frac{V_o}{V_{in}}$ graph is shifted to the left, that means the point at which $V_{in}=V_o$ is shifted to the left.  Choosing this as our operating point just means allowing our circuit to bias itself with a resistor and capacitor.
