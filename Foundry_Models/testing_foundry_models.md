@@ -25,3 +25,5 @@ Something to be noted is that the equation $I_{ds}$ above is just a simplificati
 
 Channel width modulation causes drain current to increase slighly with drain-source voltage, even in the saturation region.  Through our small-signal analysis, this can be modeled by a large reistor between the drain and source terminals.
 
+
+
